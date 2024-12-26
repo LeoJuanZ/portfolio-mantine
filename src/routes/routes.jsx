@@ -13,14 +13,14 @@ export const router = createBrowserRouter(
           element: <Home />,
         },
         {
-          path: "",
-          element: <Navigate to={"home"} replace />,
+          index: true,
+          element: <Navigate to="home" replace />,
         },
       ],
     },
     {
       path: "*",
-      element: <Navigate to={"/home"} replace />,
+      element: <Navigate to="/home" replace />,
     },
   ],
   {
