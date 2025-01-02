@@ -1,4 +1,4 @@
-import { AppShell, Burger, Group, Skeleton } from '@mantine/core';
+import { AppShell, Burger, Group, ScrollArea, Skeleton } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import { Outlet } from 'react-router-dom';
 
@@ -23,16 +23,24 @@ function AppLayout() {
           HOLA
         </Group>
       </AppShell.Header>
-      <AppShell.Navbar p="md">
-        Navbar
-        {Array(15)
-          .fill(0)
-          .map((_, index) => (
-            <Skeleton key={index} h={28} mt="sm" animate={false} />
-          ))}
+      <AppShell.Navbar p="md" overflow="auto">
+        <AppShell.Section>Navbar header</AppShell.Section>
+        <AppShell.Section grow my="md" component={ScrollArea}>
+          {Array(60)
+            .fill(0)
+            .map((_, index) => (
+              <Skeleton key={index} h={28} mt="sm" animate={false} />
+            ))}
+        </AppShell.Section>
       </AppShell.Navbar>
       <AppShell.Main>
-        <Outlet />
+        <AppShell.Section grow my="md" component={ScrollArea}>
+          {Array(155)
+            .fill(0)
+            .map((_, index) => (
+              <Skeleton key={index} h={28} mt="sm" animate={false} />
+            ))}
+        </AppShell.Section>
       </AppShell.Main>
     </AppShell>
   );
