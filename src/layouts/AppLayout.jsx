@@ -1,4 +1,4 @@
-import { AppShell, Burger, Group, ScrollArea, Skeleton, Text } from '@mantine/core';
+import { AppShell, Burger, Group, ScrollArea, Text, Title } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import { Outlet } from 'react-router-dom';
 import SideBarElements from '../ui/sideBar/SideBarElements';
@@ -15,7 +15,6 @@ function AppLayout() {
         breakpoint: 'sm',
         collapsed: { mobile: !mobileOpened, desktop: !desktopOpened },
       }}
-      padding="md"
     >
       <AppShell.Header>
         <Group h="100%" px="md">
@@ -23,27 +22,25 @@ function AppLayout() {
           <Burger opened={desktopOpened} onClick={toggleDesktop} visibleFrom="sm" size="sm" />
           <img src="/logo.png" alt="" width={'50px'} />
           <Text
-            size="xl"
+            size="xxl"
             fw={900}
             variant="gradient"
-            gradient={{ from: 'orange', to: 'rgba(255, 160, 28, 1)', deg: 115 }}
+            gradient={{ from: 'orange', to: '#ffa01c', deg: 115 }}
           >
             Giovanni Mugno
           </Text>
         </Group>
       </AppShell.Header>
       <AppShell.Navbar overflow="auto">
-        <AppShell.Section p="md">
-          <Text size="xl">Navegación</Text>
+        <AppShell.Section p="md" py="xs" pb={0}>
+          <Title size="h3">Navegación</Title>
         </AppShell.Section>
-        <AppShell.Section grow my="md" component={ScrollArea}>
+        <AppShell.Section grow my="xs" component={ScrollArea}>
           <SideBarElements />
         </AppShell.Section>
       </AppShell.Navbar>
       <AppShell.Main>
-        <AppShell.Section grow my="md" component={ScrollArea}>
-          <Outlet />
-        </AppShell.Section>
+        <Outlet />
       </AppShell.Main>
     </AppShell>
   );

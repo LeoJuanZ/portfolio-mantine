@@ -1,10 +1,12 @@
+import { Box, Text, Title } from "@mantine/core";
+
 const Home = () => {
 
   return (
-    <div>
-      <h1>Welcome to the Home Page</h1>
-      <p>This is the home page of the Mantine Portfolio.</p>
-    </div>
+    <Box>
+      <Title size="h1">Home</Title>
+      <Text>This is the home page of the Mantine Portfolio.</Text>
+    </Box>
   );
 };
 

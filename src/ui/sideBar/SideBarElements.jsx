@@ -1,10 +1,10 @@
 import { useState } from 'react';
-import { Box, NavLink } from '@mantine/core';
+import { Box, NavLink, rem } from '@mantine/core';
 import HomeIcon from '@mui/icons-material/Home';
 
 const homeNav = [
   {
-    icon: <HomeIcon />,
+    icon: <HomeIcon sx={{ fontSize: rem(30) }} />,
     label: 'Home',
     href: '/',
     description: 'Página principal'
@@ -24,6 +24,11 @@ function NavigationElements(elements, active, setActive) {
         leftSection={item.icon}
         onClick={() => setActive(index)}
         color='orange'
+        styles={{
+          label: {
+            fontSize: '24px',
+          },
+        }}
       >
         {elements.map((children, childrenIndex) => (
           <NavLink
@@ -36,6 +41,11 @@ function NavigationElements(elements, active, setActive) {
             leftSection={children.icon}
             onClick={() => setActive(childrenIndex)}
             color='orange'
+            styles={{
+              label: {
+                fontSize: '20px',
+              },
+            }}
           />
         ))}
       </NavLink>
@@ -50,6 +60,17 @@ function NavigationElements(elements, active, setActive) {
         leftSection={item.icon}
         onClick={() => setActive(index)}
         color='orange'
+        styles={{
+          label: {
+            fontSize: rem(20),
+            fontWeight: 700,
+            lineHeight: '1',
+          },
+          description: {
+            fontSize: rem(13),
+            lineHeight: '1.5',
+          },
+        }}
       />
   ));
 

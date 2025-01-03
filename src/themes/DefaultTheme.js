@@ -1,6 +1,17 @@
 import { createTheme, rem } from "@mantine/core";
 
 export const theme = createTheme({
+  fontSizes: {
+    xs: rem(10),
+    sm: rem(11),
+    md: rem(14),
+    lg: rem(16),
+    xl: rem(20),
+    xxl: rem(24),
+    xxxl: rem(30),
+    xxxxl: rem(35),
+    xxxxxl: rem(40),
+  },
   colors: {
     // Add your color
     deepBlue: [
@@ -28,12 +39,11 @@ export const theme = createTheme({
       "#424e88",
       "#364379",
     ],
+    orange22: [
+      '#ffa01c'
+    ]
   },
 
-  shadows: {
-    md: "1px 1px 3px rgba(0, 0, 0, .25)",
-    xl: "5px 5px 3px rgba(0, 0, 0, .25)",
-  },
 
   headings: {
     fontFamily: "Roboto, sans-serif",

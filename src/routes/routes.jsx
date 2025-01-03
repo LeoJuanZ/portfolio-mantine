@@ -9,12 +9,12 @@ export const router = createBrowserRouter(
       element: <AppLayout />,
       children: [
         {
-          path: "",
+          path: "/home",
           element: <Home />,
         },
         {
           index: true,
-          element: <Navigate to="" replace />,
+          element: <Home />,
         },
       ],
     },

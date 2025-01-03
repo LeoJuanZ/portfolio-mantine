@@ -1,11 +1,12 @@
 import { MantineProvider } from "@mantine/core";
 import { RouterProvider } from "react-router-dom";
 import { router } from "./routes/routes";
+import { theme } from "./themes/DefaultTheme";
 
 function App() {
   return (
     <>
-      <MantineProvider >
+      <MantineProvider theme={theme} >
         <RouterProvider
           future={{
             v7_startTransition: true,
