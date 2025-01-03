@@ -1,6 +1,7 @@
-import { AppShell, Burger, Group, ScrollArea, Skeleton } from '@mantine/core';
+import { AppShell, Burger, Group, ScrollArea, Skeleton, Text } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import { Outlet } from 'react-router-dom';
+import SideBarElements from '../ui/sideBar/SideBarElements';
 
 function AppLayout() {
   const [mobileOpened, { toggle: toggleMobile }] = useDisclosure();
@@ -20,26 +21,28 @@ function AppLayout() {
         <Group h="100%" px="md">
           <Burger opened={mobileOpened} onClick={toggleMobile} hiddenFrom="sm" size="sm" />
           <Burger opened={desktopOpened} onClick={toggleDesktop} visibleFrom="sm" size="sm" />
-          HOLA
+          <img src="/logo.png" alt="" width={'50px'} />
+          <Text
+            size="xl"
+            fw={900}
+            variant="gradient"
+            gradient={{ from: 'orange', to: 'rgba(255, 160, 28, 1)', deg: 115 }}
+          >
+            Giovanni Mugno
+          </Text>
         </Group>
       </AppShell.Header>
-      <AppShell.Navbar p="md" overflow="auto">
-        <AppShell.Section>Navbar header</AppShell.Section>
+      <AppShell.Navbar overflow="auto">
+        <AppShell.Section p="md">
+          <Text size="xl">Navegación</Text>
+        </AppShell.Section>
         <AppShell.Section grow my="md" component={ScrollArea}>
-          {Array(60)
-            .fill(0)
-            .map((_, index) => (
-              <Skeleton key={index} h={28} mt="sm" animate={false} />
-            ))}
+          <SideBarElements />
         </AppShell.Section>
       </AppShell.Navbar>
       <AppShell.Main>
         <AppShell.Section grow my="md" component={ScrollArea}>
-          {Array(155)
-            .fill(0)
-            .map((_, index) => (
-              <Skeleton key={index} h={28} mt="sm" animate={false} />
-            ))}
+          <Outlet />
         </AppShell.Section>
       </AppShell.Main>
     </AppShell>
