@@ -9,18 +9,18 @@ export const router = createBrowserRouter(
       element: <AppLayout />,
       children: [
         {
-          path: "home",
+          path: "",
           element: <Home />,
         },
         {
           index: true,
-          element: <Navigate to="home" replace />,
+          element: <Navigate to="" replace />,
         },
       ],
     },
     {
       path: "*",
-      element: <Navigate to="/home" replace />,
+      element: <Navigate to="/" replace />,
     },
   ],
   {
