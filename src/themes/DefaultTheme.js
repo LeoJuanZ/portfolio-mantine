@@ -2,7 +2,6 @@ import { createTheme, rem } from "@mantine/core";
 
 export const theme = createTheme({
   fontFamily: 'Montserrat, sans-serif',
-  
   fontSizes: {
     xs: rem(10),
     sm: rem(11),
@@ -14,8 +13,8 @@ export const theme = createTheme({
     xxxxl: rem(35),
     xxxxxl: rem(40),
   },
+  
   colors: {
-    // Add your color
     deepBlue: [
       "#eef3ff",
       "#dce4f5",
@@ -28,7 +27,6 @@ export const theme = createTheme({
       "#39588f",
       "#2d4b81",
     ],
-    // or replace default theme color
     blue: [
       "#eef3ff",
       "#dee2f2",
