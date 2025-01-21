@@ -24,6 +24,7 @@
     "@mui/icons-material": "^6.3.0",
     "@mui/material": "^6.1.9",
     "@mui/styled-engine-sc": "^6.1.9",
+    "@tabler/icons-react": "^3.28.1",
     "axios": "^1.7.8",
     "dayjs": "^1.11.13",
     "embla-carousel-react": "^7.1.0",

@@ -1,6 +1,8 @@
 import { createTheme, rem } from "@mantine/core";
 
 export const theme = createTheme({
+  fontFamily: 'Montserrat, sans-serif',
+  
   fontSizes: {
     xs: rem(10),
     sm: rem(11),
@@ -44,11 +46,15 @@ export const theme = createTheme({
     ]
   },
 
-
   headings: {
-    fontFamily: "Roboto, sans-serif",
+    fontFamily: "Poppins, sans-serif",
     sizes: {
       h1: { fontSize: rem(36) },
+      h2: { fontSize: rem(30) },
+      h3: { fontSize: rem(24) },
+      h4: { fontSize: rem(20) },
+      h5: { fontSize: rem(16) },
+      h6: { fontSize: rem(14) },
     },
   },
 });
