@@ -42,7 +42,7 @@ function AppLayout() {
               size="xl"
               fw={900}
               variant="gradient"
-              gradient={{ from: 'orange', to: '#ffa01c', deg: 115 }}
+              gradient={{ from: 'orange.7', to: 'orange.4', deg: 115 }}
               ff="Segoe UI"
             >
               Giovanni Mugno
