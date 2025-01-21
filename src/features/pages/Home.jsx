@@ -1,4 +1,5 @@
 import { Box, Text, Title } from "@mantine/core";
+import CarouselHome from "../components/home/CarouselHome";
 
 const Home = () => {
 
@@ -6,6 +7,8 @@ const Home = () => {
     <Box>
       <Title size="h1">Home</Title>
       <Text>This is the home page of the Mantine Portfolio.</Text>
+
+      <CarouselHome />
     </Box>
   );
 };
